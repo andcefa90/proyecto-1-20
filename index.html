@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto 1:20 — Andrés Ceballos × Longevity Clinical</title>
+<meta name="description" content="Proyecto 1:20 — La construcción de un atleta. Propuesta de colaboración para Longevity Clinical.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..800&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+  html, body { margin: 0; height: 100%; background: #05080C; overflow: hidden; }
+  * { margin: 0; }
+  #stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 0 0; }
+  #stage > section { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; isolation: isolate; display: none !important; }
+  #stage > section.on { display: flex !important; }
+  #stage > section > .ph, #stage > section > .shade-full, #stage > section > .cover-shade { z-index: -1; }
+  aside { display: none !important; }
+  x-shape { display: block; }
+  x-shape.dot { border-radius: 50%; }
+  .pg::before { content: none !important; }
+  #hud { position: fixed; right: 16px; bottom: 12px; display: flex; gap: 8px; z-index: 10; opacity: 0; transition: opacity .3s; }
+  body:hover #hud { opacity: 1; }
+  #hud button { font: 500 14px/1 'JetBrains Mono', monospace; color: #EEEBE4; background: rgba(18,27,38,.85); border: 1px solid rgba(238,235,228,.2); padding: 10px 14px; cursor: pointer; border-radius: 4px; }
+  #bar { position: fixed; left: 0; bottom: 0; height: 3px; background: #D6F35B; transition: width .4s ease; z-index: 10; }
+</style>
+<link rel="stylesheet" href="deck.css">
+</head>
+<body>
+<div id="stage">
+<section id="cover" class="dark nofoot" data-transition="fade">
+<div class="ph" style="left:1120px;width:800px;height:1080px"><img class="kb" src="img/run-panel.jpg" alt="Andrés corriendo una media maratón" style="width:800px;height:1080px;object-fit:cover"></div>
+<div class="cover-shade" style="left:1120px;background:linear-gradient(90deg,#0B1118 0%,rgba(11,17,24,0) 100%)"></div>
+<div style="display:flex;flex-direction:column;justify-content:space-between;height:824px;width:1100px">
+<div>
+<p class="eyebrow a" style="--i:0">ANDRÉS CEBALLOS × LONGEVITY CLINICAL</p>
+<p class="lead a" style="--i:1;letter-spacing:14px;margin-top:72px;font-weight:600">PROYECTO</p>
+<h1 class="giant b" style="--i:2">1:20</h1>
+<p class="serif a" style="--i:4;font-size:76px;line-height:1.05;margin:12px 0 0 0">La construcción de un atleta.</p>
+</div>
+<div>
+<div class="ruler draw" style="--i:5;width:1010px;margin-bottom:28px"></div>
+<div class="strip" style="gap:40px">
+<div class="a" style="--i:6"><p class="v">36</p><p class="mono">AÑOS</p></div>
+<div class="a" style="--i:7"><p class="v">44K</p><p class="mono">COMUNIDAD</p></div>
+<div class="a" style="--i:8"><p class="v">8</p><p class="mono">MESES</p></div>
+<div class="a" style="--i:9"><p class="v">21,1 KM</p><p class="mono">DISTANCIA</p></div>
+<div class="a" style="--i:10"><p class="v hl">SUB 1:20</p><p class="mono">OBJETIVO</p></div>
+</div>
+</div>
+</div>
+<aside>PORTADA. Propósito: abrir como un documental, no como un media kit. Foto del atleta en construcción a la derecha, con zoom lento (Ken Burns). El 1:20 entra desenfocado y se enfoca: es el número que volverá en todo el deck. Abajo, la secuencia 36 → 44K → 8 meses → 21,1 km → 1:20 aparece en cascada sobre una regla de medición: la historia completa en una línea. Qué decir: “Esto no es una propuesta de patrocinio. Es un proyecto. Y queremos que Longevity Clinical sea su partner científico.” Conecta con la 02: si el número es 1:20, la siguiente slide explica por qué el número no es lo importante.</aside>
+</section>
+
+<section id="manifiesto" class="dark2" data-transition="fade">
+<p class="eyebrow a">NO SE TRATA SOLO DE CORRER</p>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+<h2 class="statement a" style="--i:1">La carrera es la métrica.</h2>
+<h2 class="statement serif b" style="--i:5">La transformación es la historia.</h2>
+</div>
+<div class="triad">
+<div class="tri a" style="--i:8"><p class="mono">LA MÉTRICA</p><p class="tv">1:20</p></div>
+<div class="tri a" style="--i:9"><p class="mono">LA HISTORIA</p><p class="tv">La transformación</p></div>
+<div class="tri a" style="--i:10"><p class="mono">EL PROPÓSITO</p><p class="tv hl">La inspiración</p></div>
+</div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>NO SE TRATA SOLO DE CORRER. Propósito: desactivar desde el principio la lectura “influencer busca patrocinio”. Una sola idea en dos líneas: la primera, sobria; la segunda, en serif itálica y color de acento, como una voz más humana. Abajo, las tres capas del proyecto (métrica, historia, propósito) en una fila de datos. Animación: las líneas entran por capas; la segunda se enfoca desde un desenfoque. Qué decir: “El 1:20 es lo que se puede medir. Lo que vale la pena contar es lo que tiene que cambiar para llegar ahí.” Conecta con la 03: ¿quién es la persona que va a cambiar?</aside>
+</section>
+
+<section id="quien" class="bone" style="padding-left:888px" data-transition="fade">
+<div class="ph" style="left:0px;width:760px;height:1080px"><img class="kb" src="img/casual-portrait.jpg" alt="Andrés junto a un río, con jersey claro y gafas de sol" style="width:760px;height:1080px;object-fit:cover"></div>
+<div style="position:absolute;left:0px;top:780px;width:760px;height:300px;background:linear-gradient(180deg,rgba(11,17,24,0) 0%,rgba(11,17,24,0.7) 100%)"></div>
+<p class="photo-tag f" style="--i:6">LA PERSONA DETRÁS DEL ATLETA</p>
+<p class="eyebrow a">¿QUIÉN SOY?</p>
+<h2 class="title a" style="--i:1;font-size:88px;margin-top:28px">Andrés Ceballos.</h2>
+<div style="margin-top:44px">
+<div class="fact a" style="--i:2"><p class="mono">EDAD</p><p class="fv">36 años</p></div>
+<div class="fact a" style="--i:3"><p class="mono">FAMILIA</p><p class="fv">Padre de dos hijos</p></div>
+<div class="fact a" style="--i:4"><p class="mono">OFICIO</p><p class="fv">Empresario</p></div>
+<div class="fact a" style="--i:5;border-bottom:2px solid rgba(11,17,24,0.18)"><p class="mono">ORIGEN</p><p class="fv">Exoficial del Ejército</p></div>
+</div>
+<p class="serif a" style="--i:7;font-size:46px;line-height:1.15;margin-top:48px">“No tengo más tiempo que los demás. Tengo un propósito y decidí construir un sistema para alcanzarlo.”</p>
+<div class="foot" style="left:888px;width:904px"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>¿QUIÉN SOY? Propósito: presentar a una persona real, no a un atleta profesional. Foto casual a sangre a la izquierda: la persona detrás del atleta. A la derecha, una ficha casi clínica (edad, familia, oficio, origen) con líneas de medición: el tono del laboratorio aplicado a una vida. Cierra con la frase pilar en serif. Animación: zoom suave de la foto, filas de la ficha entrando en cascada. Qué decir: “No soy atleta profesional. Tengo trabajo, familia y las mismas limitaciones que mucha gente. Lo que cambié fue el sistema.” Conecta con la 04: esas limitaciones son las de todos.</aside>
+</section>
+
+<section id="vida" class="dark" data-transition="fade">
+<p class="eyebrow a">TENGO UNA VIDA, COMO TODOS</p>
+<div class="wall" style="margin-top:72px">
+<p class="obj b" style="--i:1">“No tengo tiempo.”</p>
+<p class="obj b" style="--i:2">“Tengo hijos.”</p>
+<p class="obj b" style="--i:3">“Tengo trabajo.”</p>
+<p class="obj b" style="--i:4">“Estoy demasiado grande.”</p>
+<p class="obj b" style="--i:5">“Ya lo he intentado.”</p>
+<p class="obj b" style="--i:6">“No sé por dónde empezar.”</p>
+<p class="obj b" style="--i:7">“No soy atleta.”</p>
+</div>
+<div style="flex:1"></div>
+<div class="rule draw" style="--i:9;width:1664px;margin-bottom:40px"></div>
+<h2 class="title a" style="--i:10;font-size:84px;letter-spacing:-3px">La transformación <span class="hl">no pertenece únicamente</span> a los atletas profesionales.</h2>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>TENGO UNA VIDA, COMO TODOS. Propósito: que la audiencia (y Longevity Clinical) se reconozca. Las excusas aparecen como un muro de voces en gris, una por una, desenfocadas al entrar. Debajo, una línea de medición se traza y llega la respuesta en blanco, con el acento en “no pertenece únicamente”. Sin fotos: aquí manda la tipografía. Qué decir: “Todas estas frases las he dicho yo. Por eso el proyecto no va de lo que yo puedo hacer, sino de demostrar que otras personas también pueden empezar.” Conecta con la 05: lo que traigo de mis vidas anteriores.</aside>
+</section>
+
+<section id="convergencia" class="dark2" data-transition="fade">
+<p class="eyebrow a">MI TRANSFORMACIÓN</p>
+<h2 class="title a" style="--i:1;margin-top:28px">No estoy construyendo solo un corredor.<br><span class="hl">Estoy construyendo un atleta.</span></h2>
+<div style="flex:1"></div>
+<div class="lives">
+<div class="life a" style="--i:3"><p class="mono">01</p><p class="ln">Ejército</p><p class="body">Disciplina · Liderazgo · Resiliencia · Mentalidad</p></div>
+<div class="life a" style="--i:4"><p class="mono">02</p><p class="ln">Empresario</p><p class="body">Presión · Decisiones · Ejecución · Responsabilidad</p></div>
+<div class="life a" style="--i:5"><p class="mono">03</p><p class="ln">Padre</p><p class="body">Propósito · Responsabilidad · Tiempo · Ejemplo</p></div>
+</div>
+<svg class="f" style="--i:7;width:1664px;height:110px;margin:8px 0" width="1664" height="110" viewBox="0 0 1664 110" aria-label="Tres líneas que convergen en un punto"><path d="M261 0 C261 70 832 40 832 104" fill="none" stroke="#EEEBE4" stroke-opacity="0.35" stroke-width="2"/><path d="M832 0 L832 104" fill="none" stroke="#EEEBE4" stroke-opacity="0.35" stroke-width="2"/><path d="M1403 0 C1403 70 832 40 832 104" fill="none" stroke="#EEEBE4" stroke-opacity="0.35" stroke-width="2"/><circle cx="832" cy="104" r="6" fill="#D6F35B"/></svg>
+<div class="athlete p" style="--i:9"><div><p class="mono" style="color:#D6F35B">04 — LA CONVERGENCIA</p><p class="ln">Atleta</p></div><p class="body" style="color:#EEEBE4;font-size:32px">Disciplina · Performance · Salud · Longevidad</p></div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>MI TRANSFORMACIÓN. Propósito: mostrar que el atleta no nace de cero; es la suma de tres vidas. Composición: tres columnas (Ejército, Empresario, Padre) con sus cuatro valores; tres líneas finas convergen en un punto de acento y desembocan en el bloque “Atleta”, el único enmarcado en color. Animación: columnas en cascada, las líneas aparecen después y el bloque final entra con un pequeño cambio de escala. Qué decir: “El Ejército me dio disciplina; la empresa, ejecución bajo presión; ser padre, propósito. Este proyecto junta las tres cosas en un cuerpo.” Conecta con la 06: ¿y cuál es el reto concreto?</aside>
+</section>
+
+<section id="reto" class="volt" data-transition="fade">
+<p class="eyebrow a">EL RETO · 21,1 KM EN MENOS DE 1 HORA Y 20 MINUTOS</p>
+<div style="flex:1;display:flex;align-items:center;justify-content:space-between">
+<div>
+<p class="mono a" style="--i:1;font-size:32px;letter-spacing:6px">SUB</p>
+<h2 class="giant b" style="--i:2">1:20</h2>
+</div>
+<div class="data" style="width:560px">
+<div class="datum a" style="--i:4"><p class="dv">21,1 km</p><p class="mono" style="margin-top:10px">MEDIA MARATÓN</p></div>
+<div class="datum a" style="--i:5"><p class="dv">3:47 /km</p><p class="mono" style="margin-top:10px">RITMO MEDIO NECESARIO</p></div>
+<div class="datum a" style="--i:6;border-bottom:2px solid rgba(11,17,24,0.35);padding-bottom:16px"><p class="dv">8 meses</p><p class="mono" style="margin-top:10px">PLAZO</p></div>
+</div>
+</div>
+<div class="ruler draw" style="--i:7;width:1664px;margin-bottom:24px"></div>
+<p class="a" style="--i:8;font-size:30px;line-height:1.4;margin:0;color:#0B1118">En el camino: otras medias maratones. Después: maratones de relevancia internacional, incluidos World Marathon Majors.</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>EL RETO. Propósito: el momento de impacto; la única slide en color de acento, como una pausa. El 1:20 a escala máxima, con tres datos a la derecha: distancia, ritmo y plazo. El ritmo (3:47 por kilómetro de media) es simple aritmética: 1 h 20 min repartida en 21,1 km; no es un dato de rendimiento actual. Abajo, una regla de medición y la proyección posterior (otras medias maratones; más adelante, maratones de relevancia internacional, incluidos World Marathon Majors). Animación: el 1:20 se enfoca; los datos suben uno a uno. Qué decir: “Es una cifra exigente para alguien con mi vida. Por eso es el reto.” Conecta con la 07: ¿por qué ahora, a los 36?</aside>
+</section>
+
+<section id="edad" class="dark" data-transition="fade">
+<div class="ph" style="left:0px;width:1920px;height:1080px"><img class="kb" src="img/casual-wide.jpg" alt="Andrés frente a los rápidos de un río" style="width:1920px;height:1080px;object-fit:cover"></div>
+<div class="shade-full"></div>
+<p class="eyebrow a">¿POR QUÉ A LOS 36?</p>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center;width:900px">
+<p class="giant b hl" style="--i:1;font-size:320px;letter-spacing:-14px">36</p>
+<p class="serif a" style="--i:4;font-size:64px;line-height:1.1;margin:24px 0 0 0">La edad no define nuestro límite. Nuestro punto de partida tampoco.</p>
+<p class="a" style="--i:6;font-size:32px;line-height:1.4;color:#C9CED6;margin:40px 0 0 0;width:820px">No sé todavía si lo voy a conseguir. Y precisamente por eso vale la pena documentarlo.</p>
+</div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>¿POR QUÉ A LOS 36? Propósito: la pausa honesta del deck. Foto casual a sangre completa, con zoom muy lento y una sombra a la izquierda para el texto. El 36 en acento, la frase sobre la edad en serif, y la línea más importante del tono: no sé si lo voy a conseguir. Esa incertidumbre es lo que hace que la historia valga la pena. Qué decir: “No vengo a prometer un resultado. Vengo a proponer documentarlo con rigor, salga como salga.” Conecta con la 08: si se va a documentar con rigor, ¿qué se está midiendo exactamente?</aside>
+</section>
+
+<section id="experimento" class="bone" data-transition="fade">
+<p class="eyebrow a">EL EXPERIMENTO</p>
+<div class="lp" style="margin-top:40px">
+<div class="lp-col">
+<h2 class="big a" style="--i:1">Longevidad</h2>
+<div style="margin-top:28px">
+<p class="item a" style="--i:3">Salud</p>
+<p class="item a" style="--i:4">Prevención</p>
+<p class="item a" style="--i:5">Biomarcadores</p>
+<p class="item a" style="--i:6">Recuperación</p>
+<p class="item a" style="--i:7">Hábitos</p>
+<p class="item a" style="--i:8;border-bottom:2px solid rgba(11,17,24,0.15)">Calidad de vida</p>
+</div>
+</div>
+<div class="times p" style="--i:2"><p>×</p></div>
+<div class="lp-col">
+<h2 class="big a" style="--i:1;text-align:right">Performance</h2>
+<div style="margin-top:28px;text-align:right">
+<p class="item a" style="--i:3">Running</p>
+<p class="item a" style="--i:4">Resistencia</p>
+<p class="item a" style="--i:5">VO₂max</p>
+<p class="item a" style="--i:6">Rendimiento cardiovascular</p>
+<p class="item a" style="--i:7">Entrenamiento</p>
+<p class="item a" style="--i:8;border-bottom:2px solid rgba(11,17,24,0.15)">Recuperación y adaptación</p>
+</div>
+</div>
+</div>
+<div style="flex:1"></div>
+<p class="serif a" style="--i:10;font-size:48px;line-height:1.15;margin:0;width:1500px">No se trata solamente de vivir más. Se trata de construir una vida en la que podamos seguir siendo capaces de hacer cosas extraordinarias.</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>LONGEVIDAD × PERFORMANCE. Propósito: definir el territorio del proyecto, que es exactamente donde vive Longevity Clinical. Dos columnas espejo sobre fondo claro, como una ficha de laboratorio; en el centro, un círculo en el azul de Longevity Clinical con el signo × en acento. Debajo, la tesis en serif. Sin promesas médicas: son dimensiones, no beneficios. Animación: los dos títulos entran a la vez, el × aparece con un cambio de escala, las filas se escriben en cascada. Qué decir: “La mayoría habla de longevidad o de rendimiento. Este proyecto pregunta qué pasa cuando se trabajan juntos.” Conecta con la 09: el método.</aside>
+</section>
+
+<section id="sistema" class="dark" data-transition="fade">
+<p class="eyebrow a">EL SISTEMA · BIOHACKING SIN ATAJOS</p>
+<div style="flex:1;display:flex;align-items:center;justify-content:space-between">
+<div style="width:736px">
+<h2 class="serif a" style="--i:1;font-size:66px;line-height:1.08;margin:0">¿Qué pasa cuando dejamos de adivinar lo que nuestro cuerpo necesita y empezamos a medirlo?</h2>
+<p class="body a" style="--i:3;margin-top:40px;width:660px">No son trucos, suplementos ni gadgets. Es un método que se repite durante ocho meses, con protocolos definidos junto con Longevity Clinical.</p>
+</div>
+<div class="cycle f" style="--i:2">
+<svg style="position:absolute;left:0px;top:0px;width:864px;height:700px" width="864" height="700" viewBox="0 0 864 700" aria-label="Ciclo de siete pasos alrededor de un círculo"><circle cx="432" cy="380" r="244" fill="none" stroke="#EEEBE4" stroke-opacity="0.18" stroke-width="2" stroke-dasharray="2 12"/><circle cx="432" cy="380" r="220" fill="none" stroke="#EEEBE4" stroke-opacity="0.3" stroke-width="2"/><circle cx="432" cy="160" r="9" fill="#D6F35B"/><circle cx="604" cy="243" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="646.5" cy="429" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="527.5" cy="578" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="336.5" cy="578" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="217.5" cy="429" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="260" cy="243" r="7" fill="#0B1118" stroke="#EEEBE4" stroke-width="2"/><circle cx="432" cy="160" r="14" fill="none" stroke="#D6F35B" stroke-width="2"><animateMotion dur="8s" begin="1.2s" path="M0 0 A220 220 0 1 1 0 440 A220 220 0 1 1 0 0"/></circle></svg>
+<div class="node" style="left:312px;top:58px;text-align:center"><p class="mono">01</p><p class="nw">MEDIR</p></div>
+<div class="node" style="left:632px;top:200px;width:220px"><p class="mono">02</p><p class="nw">ENTENDER</p></div>
+<div class="node" style="left:675px;top:386px;width:189px"><p class="mono">03</p><p class="nw">OPTIMIZAR</p></div>
+<div class="node" style="left:548px;top:598px"><p class="mono">04</p><p class="nw">ENTRENAR</p></div>
+<div class="node" style="left:76px;top:598px;text-align:right"><p class="mono">05</p><p class="nw">RECUPERAR</p></div>
+<div class="node" style="left:0px;top:350px;width:189px;text-align:right"><p class="mono">06</p><p class="nw">VOLVER A MEDIR</p></div>
+<div class="node" style="left:0px;top:200px;width:232px;text-align:right"><p class="mono">07</p><p class="nw">ADAPTAR</p></div>
+<p class="serif" style="position:absolute;left:272px;top:350px;width:320px;text-align:center;font-size:48px;margin:0;color:#EEEBE4">Sin adivinar.</p>
+</div>
+</div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>EL SISTEMA. Propósito: redefinir el biohacking como método, no como trucos. Izquierda: la pregunta central en serif. Derecha: un ciclo de siete pasos (medir, entender, optimizar, entrenar, recuperar, volver a medir, adaptar) dibujado como un instrumento de medición, con un anillo de marcas. Animación: un anillo de acento recorre el ciclo completo una vez y vuelve a “Medir”: la idea de que todo empieza y termina en el dato. Sin protocolos inventados: “protocolos definidos junto con Longevity Clinical”. Qué decir: “Dejar de adivinar. Esa es la parte que no puedo hacer solo.” Conecta con la 10: qué se mide.</aside>
+</section>
+
+<section id="medir" class="dark2" data-transition="fade">
+<p class="eyebrow a">LA CIENCIA</p>
+<h2 class="title a" style="--i:1;font-size:88px;margin-top:28px">Lo que vamos a medir.</h2>
+<p class="body a" style="--i:2;margin-top:16px">Hoy no hay resultados. El punto de partida todavía está por medir.</p>
+<div style="flex:1"></div>
+<div class="dims">
+<div class="dim a" style="--i:3"><p class="mono">01</p><p class="dn">Cuerpo</p><p class="di">Composición corporal<br>Masa muscular<br>Grasa corporal<br>Peso</p><p class="base">BASELINE [ — ]</p></div>
+<div class="dim a" style="--i:4"><p class="mono">02</p><p class="dn">Rendimiento</p><p class="di">Capacidad cardiovascular<br>VO₂max<br>Ritmos<br>Evolución del rendimiento<br>Variables de entrenamiento</p><p class="base">BASELINE [ — ]</p></div>
+<div class="dim a" style="--i:5"><p class="mono">03</p><p class="dn">Recuperación</p><p class="di">Sueño<br>HRV<br>Frecuencia cardíaca en reposo<br>Indicadores de recuperación</p><p class="base">BASELINE [ — ]</p></div>
+<div class="dim a" style="--i:6"><p class="mono">04</p><p class="dn">Salud</p><p class="di">Biomarcadores<br>Salud metabólica<br>Estado nutricional<br>Otros indicadores determinados clínicamente</p><p class="base">BASELINE [ — ]</p></div>
+</div>
+<p class="mono a" style="--i:8;margin-top:40px">EVALUACIONES Y FRECUENCIA DETERMINADAS POR EL EQUIPO CLÍNICO DE LONGEVITY CLINICAL</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>LO QUE VAMOS A MEDIR. Propósito: mostrar rigor sin inventar nada. Cuatro dimensiones como columnas de un panel de laboratorio: cuerpo, rendimiento, recuperación y salud. Cada columna termina en un campo “BASELINE [ — ]” vacío, a propósito: el dato todavía no existe y la primera evaluación lo llenará. La selección final de evaluaciones y su frecuencia las determina el equipo clínico. Animación: las columnas entran en cascada, como un panel que se enciende. Qué decir: “No traigo resultados. Traigo la decisión de medirlo todo y de enseñarlo, salga lo que salga.” Conecta con la 11: cómo se reparte en el tiempo.</aside>
+</section>
+
+<section id="timeline" class="bone" data-transition="fade">
+<p class="eyebrow a">LOS 8 MESES</p>
+<h2 class="title a" style="--i:1;font-size:88px;margin-top:28px">Seis fases. Una línea de meta.</h2>
+<div style="flex:1"></div>
+<div class="tl">
+<div class="a" style="--i:2"><p class="mono">MES 0</p><div class="track"><x-shape kind="ellipse" class="dot"></x-shape><div class="seg draw" style="--i:3"></div></div><p class="ph-name">BASELINE</p><p class="ph-copy">¿Dónde estoy hoy?</p></div>
+<div class="a" style="--i:3"><p class="mono">MESES 1–2</p><div class="track"><x-shape kind="ellipse" class="dot"></x-shape><div class="seg draw" style="--i:4"></div></div><p class="ph-name">BUILD</p><p class="ph-copy">Construcción de la base.</p></div>
+<div class="a" style="--i:4"><p class="mono">MESES 3–4</p><div class="track"><x-shape kind="ellipse" class="dot"></x-shape><div class="seg draw" style="--i:5"></div></div><p class="ph-name">ADAPT</p><p class="ph-copy">Adaptación y evolución.</p></div>
+<div class="a" style="--i:5"><p class="mono">MESES 5–6</p><div class="track"><x-shape kind="ellipse" class="dot"></x-shape><div class="seg draw" style="--i:6"></div></div><p class="ph-name">OPTIMIZE</p><p class="ph-copy">Optimización.</p></div>
+<div class="a" style="--i:6"><p class="mono">MES 7</p><div class="track"><x-shape kind="ellipse" class="dot"></x-shape><div class="seg draw" style="--i:7"></div></div><p class="ph-name">PEAK</p><p class="ph-copy">Preparación específica.</p></div>
+<div class="a" style="--i:7"><p class="mono">MES 8</p><div class="track"><x-shape kind="ellipse" class="dot" style="width:16px;height:16px;background:#D6F35B;border:3px solid #0B1118"></x-shape><div class="seg" style="background:rgba(11,17,24,0)"></div></div><p class="ph-name">RACE DAY</p><p class="race">21,1 KM · SUB 1:20</p></div>
+</div>
+<div style="flex:1"></div>
+<p class="body a" style="--i:9">Cada fase empieza con una medición y termina con un ajuste. Las evaluaciones de cada etapa las define el equipo clínico.</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>LOS 8 MESES. Propósito: convertir el reto en un plan visible. Una línea horizontal que se construye de izquierda a derecha, con seis fases: Baseline (mes 0), Build (1–2), Adapt (3–4), Optimize (5–6), Peak (7) y Race Day (8). El último punto es el único en acento y su etiqueta repite el 21,1 km · sub 1:20. Composición minimalista, mucho aire. Animación: cada tramo de la línea se dibuja en secuencia, como un cronómetro que avanza. Qué decir: “Ocho meses no son una cuenta atrás; son seis capítulos, y cada uno va a tener su contenido.” Conecta con la 12: quién va a ver esos capítulos.</aside>
+</section>
+
+<section id="audiencia" class="dark" data-transition="fade">
+<p class="eyebrow a">44.000 PERSONAS / UNA HISTORIA</p>
+<div style="flex:1;display:flex;flex-direction:column;justify-content:center">
+<p class="giant b" style="--i:1;font-size:340px;letter-spacing:-16px">44.000</p>
+<p class="lead a" style="--i:3;font-size:56px;margin-top:20px">personas que pueden acompañar el experimento.</p>
+<div class="verbs" style="margin-top:56px">
+<p class="verb a" style="--i:5">Identificarse.</p>
+<p class="verb a" style="--i:6">Inspirarse.</p>
+<p class="verb a hl" style="--i:7">Empezar.</p>
+</div>
+</div>
+<p class="body a" style="--i:9;width:1500px;color:#C9CED6">“El objetivo no es que me vean lograrlo. Es que alguien que está mirando piense: «Si él pudo empezar, yo también puedo».”</p>
+<p class="mono a" style="--i:10;margin-top:28px">COMUNIDAD APROXIMADA EN INSTAGRAM</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>44.000 PERSONAS / UNA HISTORIA. Propósito: reencuadrar la audiencia. No son “followers”: son personas que pueden acompañar el experimento. El número a escala gigante (es aproximado y así lo indica la nota), y debajo, tres verbos en serif que marcan el viaje del espectador: identificarse, inspirarse, empezar; el último en acento. Cierra con la frase humana del proyecto. Animación: el número se enfoca; los verbos aparecen uno detrás de otro. Qué decir: “Lo que me importa no es que me miren. Es que alguien empiece.” Conecta con la 13: cómo se les cuenta la historia.</aside>
+</section>
+
+<section id="serie" class="dark2" data-transition="fade">
+<p class="eyebrow a">EL CONTENIDO</p>
+<h2 class="title a" style="--i:1;margin-top:28px">Una serie, no una publicación.</h2>
+<div style="flex:1"></div>
+<div class="eps">
+<div class="ep a" style="--i:2"><p class="mono">EP 01</p><p class="et">El punto de partida</p></div>
+<div class="ep a" style="--i:3"><p class="mono">EP 02</p><p class="et">¿Qué dice mi cuerpo?</p></div>
+<div class="ep a" style="--i:4"><p class="mono">EP 03</p><p class="et">Construyendo el motor</p></div>
+<div class="ep a" style="--i:5"><p class="mono">EP 04</p><p class="et">Aprendiendo a recuperar</p></div>
+<div class="ep a" style="--i:6"><p class="mono">EP 05</p><p class="et">Los primeros resultados</p></div>
+<div class="ep a" style="--i:7"><p class="mono">EP 06</p><p class="et">Los obstáculos</p></div>
+<div class="ep a" style="--i:8"><p class="mono">EP 07</p><p class="et">La preparación final</p></div>
+<div class="ep ep-final a" style="--i:9"><p class="mono">EP 08</p><p class="et">21,1 km — sub 1:20</p></div>
+</div>
+<div style="flex:1"></div>
+<p class="body a" style="--i:11;width:1400px">Los avances y también los obstáculos, los ajustes, las frustraciones y los aprendizajes. Sin guion de éxito perfecto: la autenticidad es parte del valor.</p>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>LA SERIE. Propósito: demostrar que la colaboración es una narrativa continua, no un post aislado. Ocho episodios en una cuadrícula editorial de 4 × 2, como el índice de una docuserie; el episodio final, en acento. El episodio 06 (“Los obstáculos”) está ahí a propósito: la historia incluye lo que no sale bien. Animación: los episodios aparecen en orden, como una temporada que se desbloquea. Qué decir: “No quiero una historia de éxito fabricada. Si un mes sale mal, ese mes también es contenido, y probablemente el más valioso.” Conecta con la 14: quién aporta la ciencia detrás de cada episodio.</aside>
+</section>
+
+<section id="partner" class="bone" data-transition="fade">
+<p class="eyebrow a">POR QUÉ LONGEVITY CLINICAL</p>
+<h2 class="title a" style="--i:1;margin-top:28px">No un patrocinador.<br>El partner científico del proyecto.</h2>
+<div style="flex:1"></div>
+<div class="eq">
+<div class="term p" style="--i:3"><img src="img/lc-circle.png" alt="Logotipo de Longevity Clinical Institute" style="width:150px;height:150px;object-fit:cover;border-radius:75px"><p class="mono">LA CIENCIA</p></div>
+<p class="op f" style="--i:4">+</p>
+<div class="term p" style="--i:5"><p class="tn">Andrés</p><p class="mono">EL EXPERIMENTO HUMANO</p></div>
+<p class="op f" style="--i:6">+</p>
+<div class="term p" style="--i:7"><p class="tn">44.000</p><p class="mono">LA COMUNIDAD</p></div>
+<p class="op f" style="--i:8">=</p>
+<div class="result p" style="--i:9"><p class="mono">PROYECTO</p><p class="rv">1:20</p></div>
+</div>
+<div style="flex:1"></div>
+<div class="gives">
+<div class="give a" style="--i:10"><p class="mono">LONGEVITY CLINICAL APORTA</p><p class="gt">Conocimiento clínico · Evaluación · Interpretación · Seguimiento · Optimización · Ciencia · Estructura</p></div>
+<div class="give a" style="--i:11"><p class="mono">ANDRÉS APORTA</p><p class="gt">El caso real · La transformación · La disciplina · La historia · La documentación · La comunidad · El contenido · La exposición</p></div>
+</div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>POR QUÉ LONGEVITY CLINICAL. La slide más importante del deck. Propósito: posicionar a Longevity Clinical como partner científico, no como logo en una camiseta. Una ecuación visual: Longevity Clinical (la ciencia) + Andrés (el experimento humano) + 44.000 (la comunidad) = Proyecto 1:20, con el resultado en un bloque oscuro y el 1:20 en acento. Debajo, qué aporta cada parte, en dos columnas simétricas: es una colaboración entre iguales. Animación: los términos de la ecuación aparecen uno a uno, el signo igual llega al final. Qué decir: “Yo puedo poner la disciplina y la historia. Lo que no puedo poner solo es el criterio clínico. Sin eso, esto es otro reto de redes sociales; con eso, es un caso real.” Conecta con la 15: lo que gana cada parte.</aside>
+</section>
+
+<section id="valor" class="dark" data-transition="fade">
+<p class="eyebrow a">LO QUE PUEDE GANAR LONGEVITY CLINICAL</p>
+<h2 class="title a" style="--i:1;margin-top:28px">Lo que podemos construir juntos.</h2>
+<div style="flex:1"></div>
+<div class="assets">
+<div class="asset a" style="--i:2"><p class="mono">01</p><p class="at">Caso real</p><p class="ac">Un proceso de transformación documentado durante 8 meses.</p></div>
+<div class="asset a" style="--i:3"><p class="mono">02</p><p class="at">Storytelling</p><p class="ac">Una historia humana alrededor de longevidad y performance.</p></div>
+<div class="asset a" style="--i:4"><p class="mono">03</p><p class="at">Educación</p><p class="ac">Contenido que explica salud, recuperación, rendimiento y optimización.</p></div>
+<div class="asset a" style="--i:5"><p class="mono">04</p><p class="at">Visibilidad</p><p class="ac">Integración natural de Longevity Clinical en el proceso.</p></div>
+<div class="asset a" style="--i:6"><p class="mono">05</p><p class="at">Comunidad</p><p class="ac">Una audiencia que puede identificarse con el proceso.</p></div>
+<div class="asset a" style="--i:7"><p class="mono">06</p><p class="at">Contenido de largo plazo</p><p class="ac">No una publicación aislada: una narrativa continua.</p></div>
+<div class="asset a" style="--i:8"><p class="mono">07</p><p class="at">Proyecto replicable</p><p class="ac">Un modelo que podría inspirar a otras personas a iniciar procesos similares.</p></div>
+<div class="asset-final p" style="--i:10"><p class="at">Una colaboración de valor mutuo.</p></div>
+</div>
+<div class="foot"><p>PROYECTO 1:20</p><p class="pg">/ 16</p></div>
+<aside>LO QUE PODEMOS CONSTRUIR JUNTOS. Propósito: traducir la historia a valor concreto para Longevity Clinical, sin prometer métricas. Siete activos numerados en una cuadrícula editorial (caso real, storytelling, educación, visibilidad, comunidad, contenido de largo plazo, proyecto replicable); la octava celda, en acento, resume la tesis: valor mutuo. Animación: los activos aparecen en orden y el bloque final entra con un cambio de escala. Qué decir: “No les pido un patrocinio de un post. Les propongo ocho meses de contenido con su ciencia en el centro.” Las condiciones concretas (alcance, entregables, inversión) quedan para la conversación siguiente. Conecta con el cierre.</aside>
+</section>
+
+<section id="cierre" class="dark nofoot" style="padding-left:920px">
+<div class="ph" style="left:0px;width:800px;height:1080px"><img class="kb" src="img/run-panel.jpg" alt="Andrés corriendo una media maratón" style="width:800px;height:1080px;object-fit:cover"></div>
+<div class="cover-shade" style="left:380px;background:linear-gradient(90deg,rgba(11,17,24,0) 0%,#0B1118 100%)"></div>
+<p class="lead a" style="letter-spacing:14px;font-weight:600">PROYECTO</p>
+<p class="giant b hl" style="--i:1;font-size:340px;letter-spacing:-16px">1:20</p>
+<div style="flex:1"></div>
+<p class="a" style="--i:4;font-size:56px;font-weight:600;letter-spacing:-1px;line-height:1.1;margin:0">El objetivo es 1:20.</p>
+<p class="serif a" style="--i:6;font-size:68px;line-height:1.05;margin:12px 0 0 0;color:#D6F35B">El propósito es demostrar<br>qué es posible.</p>
+<div style="flex:1"></div>
+<div class="ruler draw" style="--i:8;width:872px;margin-bottom:24px"></div>
+<p class="eyebrow a" style="--i:9;color:#EEEBE4">ANDRÉS CEBALLOS × LONGEVITY CLINICAL</p>
+<p class="mono a" style="--i:10;margin-top:16px">@ANDCEFA90 · ANDCEFA@GMAIL.COM · +57 321 215 4102</p>
+<aside>CIERRE. Propósito: dejar una sola sensación: queremos ser parte de esto. Espejo de la portada: la foto del atleta ahora a la izquierda (empezamos mirando hacia él; terminamos caminando con él) y el 1:20, esta vez en acento. Dos frases finales: el objetivo y el propósito. Firma conjunta Andrés Ceballos × Longevity Clinical y datos de contacto. Animación: el 1:20 se enfoca por última vez; la regla de medición se traza bajo la firma. Qué decir: “No sé todavía si voy a bajar de 1:20. Sé que, con ustedes, vamos a poder demostrar qué es posible. El siguiente paso sería sentarnos a definir juntos el baseline.”</aside>
+</section>
+
+
+</div>
+<div id="bar"></div>
+<div id="hud"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Siguiente">→</button><button id="fs" aria-label="Pantalla completa">⤢</button></div>
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(stage.querySelectorAll(':scope > section'));
+  var n = slides.length, cur = 0;
+  slides.forEach(function (s, i) {
+    var pg = s.querySelector('.pg');
+    if (pg) pg.textContent = (i + 1) + ' / ' + n;
+  });
+  function fit() {
+    var k = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+    stage.style.transform = 'scale(' + k + ') translate(-50%, -50%)';
+  }
+  function show(i) {
+    cur = Math.max(0, Math.min(n - 1, i));
+    slides.forEach(function (s, j) { s.classList.toggle('on', j === cur); });
+    slides[cur].querySelectorAll('svg').forEach(function (svg) {
+      if (svg.setCurrentTime) { svg.setCurrentTime(0); svg.unpauseAnimations(); }
+    });
+    document.getElementById('bar').style.width = ((cur + 1) / n * 100) + '%';
+    history.replaceState(null, '', '#' + (cur + 1));
+  }
+  function go(d) { show(cur + d); }
+  document.addEventListener('keydown', function (e) {
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].indexOf(e.key) > -1) { e.preventDefault(); go(1); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].indexOf(e.key) > -1) { e.preventDefault(); go(-1); }
+    else if (e.key === 'Home') show(0);
+    else if (e.key === 'End') show(n - 1);
+    else if (e.key === 'f' || e.key === 'F') toggleFs();
+  });
+  function toggleFs() {
+    if (!document.fullscreenElement) document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+  document.getElementById('prev').onclick = function (e) { e.stopPropagation(); go(-1); };
+  document.getElementById('next').onclick = function (e) { e.stopPropagation(); go(1); };
+  document.getElementById('fs').onclick = function (e) { e.stopPropagation(); toggleFs(); };
+  document.addEventListener('click', function (e) { go(e.clientX < window.innerWidth / 3 ? -1 : 1); });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
+    x0 = null;
+  });
+  window.addEventListener('hashchange', function () {
+    var h = parseInt(location.hash.slice(1), 10);
+    if (!isNaN(h) && h - 1 !== cur) show(h - 1);
+  });
+  window.addEventListener('resize', fit);
+  fit();
+  var start = parseInt(location.hash.slice(1), 10);
+  show(isNaN(start) ? 0 : start - 1);
+})();
+</script>
+</body>
+</html>
