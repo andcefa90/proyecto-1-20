@@ -2,16 +2,27 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B1118">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Proyecto 1:20">
+<meta property="og:title" content="Proyecto 1:20 — La construcción de un atleta">
+<meta property="og:description" content="Andrés Ceballos × Longevity Clinical">
+<meta property="og:image" content="https://andcefa90.github.io/proyecto-1-20/img/run-panel.jpg">
 <title>Proyecto 1:20 — Andrés Ceballos × Longevity Clinical</title>
 <meta name="description" content="Proyecto 1:20 — La construcción de un atleta. Propuesta de colaboración para Longevity Clinical.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300..800&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
-  html, body { margin: 0; height: 100%; background: #05080C; overflow: hidden; }
+  html, body { margin: 0; height: 100%; background: #05080C; overflow: hidden; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; -webkit-user-select: none; user-select: none; touch-action: manipulation; }
+  body.portrait { background: #0B1118; }
+  @media (hover: none) { #hud { display: none !important; } }
   * { margin: 0; }
-  #stage { position: absolute; left: 50%; top: 50%; width: 1920px; height: 1080px; transform-origin: 0 0; }
+  #wrap { position: fixed; inset: 0; overflow: hidden; }
+  #stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
   #stage > section { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; isolation: isolate; display: none !important; }
   #stage > section.on { display: flex !important; }
   #stage > section > .ph, #stage > section > .shade-full, #stage > section > .cover-shade { z-index: -1; }
@@ -25,9 +36,10 @@
   #bar { position: fixed; left: 0; bottom: 0; height: 3px; background: #D6F35B; transition: width .4s ease; z-index: 10; }
 </style>
 <link rel="stylesheet" href="deck.css">
+<link rel="stylesheet" href="portrait.css">
 </head>
 <body>
-<div id="stage">
+<div id="wrap"><div id="stage">
 <section id="cover" class="dark nofoot" data-transition="fade">
 <div class="ph" style="left:1120px;width:800px;height:1080px"><img class="kb" src="img/run-panel.jpg" alt="Andrés corriendo una media maratón" style="width:800px;height:1080px;object-fit:cover"></div>
 <div class="cover-shade" style="left:1120px;background:linear-gradient(90deg,#0B1118 0%,rgba(11,17,24,0) 100%)"></div>
@@ -332,7 +344,7 @@
 </section>
 
 
-</div>
+</div></div>
 <div id="bar"></div>
 <div id="hud"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Siguiente">→</button><button id="fs" aria-label="Pantalla completa">⤢</button></div>
 <script>
@@ -344,9 +356,21 @@
     var pg = s.querySelector('.pg');
     if (pg) pg.textContent = (i + 1) + ' / ' + n;
   });
+  var edadImg = document.querySelector('#edad .ph img');
+  var edadSrc = edadImg ? edadImg.getAttribute('src') : null;
   function fit() {
-    var k = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
-    stage.style.transform = 'scale(' + k + ') translate(-50%, -50%)';
+    var wrap = document.getElementById('wrap');
+    var vw = wrap.clientWidth, vh = wrap.clientHeight;
+    var portrait = vh > vw;
+    document.body.classList.toggle('portrait', portrait);
+    // en vertical el lienzo toma la proporción exacta del celular (mínimo 1080×1920)
+    var W = portrait ? 1080 : 1920;
+    var H = portrait ? Math.max(1920, Math.round(1080 * vh / vw)) : 1080;
+    stage.style.width = W + 'px';
+    stage.style.height = H + 'px';
+    if (edadImg) edadImg.setAttribute('src', portrait ? 'img/casual-portrait.jpg' : edadSrc);
+    var k = Math.min(vw / W, vh / H);
+    stage.style.transform = 'translate(' + (vw - W * k) / 2 + 'px, ' + (vh - H * k) / 2 + 'px) scale(' + k + ')';
   }
   function show(i) {
     cur = Math.max(0, Math.min(n - 1, i));
