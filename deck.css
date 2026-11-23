@@ -88,9 +88,12 @@ section{counter-increment:page;display:flex;flex-direction:column;padding:128px 
 .wall{display:flex;flex-wrap:wrap;gap:20px 48px}
 .obj{font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-size:56px;line-height:1.15;color:#8FA0B3;margin:0}
 
+/* 05 ejército */
+.nodes-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 40px}
+
 /* 06 lesiones */
-.scar{display:flex;align-items:center;justify-content:space-between}
-.scar-num{font-size:600px;font-weight:200;letter-spacing:-20px;line-height:0.8;margin:0;color:#2A3649}
+.scar-row{display:flex;align-items:center;gap:56px}
+.scar-num{font-size:340px;font-weight:200;letter-spacing:-12px;line-height:0.8;margin:0;color:#2A3649}
 
 /* 07 progresión de tiempos */
 .prog{display:flex;align-items:center;justify-content:space-between}

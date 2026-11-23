@@ -38,17 +38,27 @@
 .portrait #vida .title { font-size: 84px !important; }
 
 /* 05 ejército */
-.portrait #ejercito > div:nth-of-type(1) { flex-direction: column; align-items: flex-start !important; justify-content: center !important; gap: 72px; }
-.portrait #ejercito > div:nth-of-type(1) > div:first-child { width: 936px !important; }
-.portrait #ejercito .body { width: 936px !important; }
-.portrait #ejercito .nodes { width: 900px !important; margin-left: 9px; }
+.portrait #stage > #ejercito { padding-left: 72px !important; padding-top: 1100px !important; }
+.portrait #ejercito > .ph, .portrait #ejercito > .ph img { width: 1080px !important; height: 1040px !important; }
+.portrait #ejercito > .ph img { object-position: 50% 15%; }
+.portrait #ejercito > div:nth-child(2) { width: 1080px !important; top: 740px !important; }
+.portrait #ejercito .photo-tag { left: 72px; bottom: auto; top: 970px; }
+.portrait #ejercito .title { font-size: 72px; margin-top: 24px !important; }
+.portrait #ejercito .body { margin-top: 24px !important; }
+.portrait #ejercito .nodes-grid { margin-top: 48px; }
+.portrait #ejercito .foot { left: 72px !important; width: 936px !important; }
 
 /* 06 lesiones */
-.portrait #lesiones .scar { flex-direction: column; align-items: flex-start; justify-content: center; gap: 48px; }
-.portrait #lesiones .scar > div { width: 936px !important; }
-.portrait #lesiones .scar-num { font-size: 420px; }
-.portrait #lesiones .body { width: 936px !important; }
-.portrait #lesiones .nodes { margin-left: 9px; }
+.portrait #stage > #lesiones { padding-right: 72px !important; padding-top: 1100px !important; }
+.portrait #lesiones > .ph { left: 0 !important; width: 1080px !important; height: 1040px !important; }
+.portrait #lesiones > .ph img { width: 1080px !important; height: 1040px !important; object-position: 50% 30%; }
+.portrait #lesiones > div:nth-child(2) { left: 0 !important; width: 1080px !important; top: 740px !important; }
+.portrait #lesiones .photo-tag { left: 72px !important; bottom: auto; top: 970px; }
+.portrait #lesiones .scar-row { gap: 40px; margin-top: 24px !important; }
+.portrait #lesiones .scar-num { font-size: 240px !important; }
+.portrait #lesiones .title { width: 600px !important; font-size: 56px !important; }
+.portrait #lesiones .nodes-grid { margin-top: 40px; }
+.portrait #lesiones .foot { width: 936px !important; }
 
 /* 07 progresión de tiempos */
 .portrait #clinica .title { font-size: 72px; }
