@@ -1,22 +1,21 @@
-/* Versión vertical (celular): lienzo 1080×1920. Solo aplica con body.portrait */
+/* Versión vertical (celular): lienzo de 1080 px de ancho y la altura del teléfono. Solo aplica con body.portrait */
 .portrait #stage > section { width: 100%; height: 100%; padding: 120px 72px 170px !important; }
 .portrait #stage > section.nofoot { padding: 72px !important; }
 .portrait .foot { left: 72px !important; width: 936px !important; bottom: 64px; }
+.portrait .wave { width: 1080px; height: 100%; }
 
 /* 01 portada */
 .portrait #cover { justify-content: flex-end; }
 .portrait #cover > .ph { left: 0 !important; width: 1080px !important; height: 60% !important; }
-.portrait #cover > .ph img { width: 1080px !important; height: 100% !important; }
-.portrait #cover > .cover-shade { left: 0 !important; top: calc(60% - 420px); width: 1080px; height: 420px; background: linear-gradient(180deg, rgba(11,17,24,0) 0%, #0B1118 100%) !important; }
+.portrait #cover > .ph img { width: 1080px !important; height: 100% !important; object-position: 50% 0%; }
+.portrait #cover > .cover-shade { left: 0 !important; top: calc(60% - 420px); width: 1080px; height: 420px; background: linear-gradient(180deg, rgba(28,37,51,0) 0%, #1C2533 100%) !important; }
 .portrait #cover > div:not(.ph):not(.cover-shade) { width: 936px !important; height: auto !important; display: block !important; }
-.portrait #cover .lead { margin-top: 40px !important; }
-.portrait #cover .serif { font-size: 68px !important; }
-.portrait #cover .ruler { width: 936px !important; margin-top: 56px; }
-.portrait #cover .strip { flex-wrap: wrap; gap: 32px 48px !important; }
+.portrait #cover .title { font-size: 64px !important; }
+.portrait #cover .hair { width: 936px !important; margin-top: 56px; }
+.portrait #cover .strip { flex-wrap: wrap; gap: 32px 48px; }
 
 /* 02 manifiesto */
-.portrait #manifiesto .statement { font-size: 112px; }
-.portrait #manifiesto .statement.serif { font-size: 124px; margin-top: 24px; }
+.portrait #manifiesto .statement { font-size: 108px; }
 .portrait #manifiesto .triad { grid-template-columns: 1fr; gap: 0; }
 .portrait #manifiesto .tri { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; }
 .portrait #manifiesto .tri .tv { margin: 0; }
@@ -29,90 +28,107 @@
 .portrait #quien .photo-tag { left: 72px; bottom: auto; top: 970px; }
 .portrait #quien .title { margin-top: 20px !important; }
 .portrait #quien > div:nth-of-type(3) { margin-top: 32px !important; }
-.portrait #quien .serif { margin-top: 36px !important; font-size: 44px !important; }
+.portrait #quien .quote { margin-top: 36px !important; font-size: 34px !important; }
 .portrait #quien .foot { left: 72px !important; width: 936px !important; }
 
 /* 04 vida */
 .portrait #vida .wall { margin-top: 64px !important; gap: 16px 36px; }
-.portrait #vida .obj { font-size: 64px; }
-.portrait #vida .rule { width: 936px !important; }
-.portrait #vida .title { font-size: 88px !important; }
+.portrait #vida .obj { font-size: 62px; }
+.portrait #vida .hair { width: 936px !important; }
+.portrait #vida .title { font-size: 84px !important; }
 
-/* 05 convergencia */
+/* 05 ejército */
+.portrait #ejercito > div:nth-of-type(1) { flex-direction: column; align-items: flex-start !important; justify-content: center !important; gap: 72px; }
+.portrait #ejercito > div:nth-of-type(1) > div:first-child { width: 936px !important; }
+.portrait #ejercito .body { width: 936px !important; }
+.portrait #ejercito .nodes { width: 900px !important; margin-left: 9px; }
+
+/* 06 lesiones */
+.portrait #lesiones .scar { flex-direction: column; align-items: flex-start; justify-content: center; gap: 48px; }
+.portrait #lesiones .scar > div { width: 936px !important; }
+.portrait #lesiones .scar-num { font-size: 420px; }
+.portrait #lesiones .body { width: 936px !important; }
+.portrait #lesiones .nodes { margin-left: 9px; }
+
+/* 07 clínica */
+.portrait #clinica > div:nth-of-type(1) { flex-direction: column; align-items: flex-start !important; justify-content: center !important; gap: 64px; }
+.portrait #clinica > div:nth-of-type(1) > div:first-child { width: 936px !important; }
+.portrait #clinica .body { width: 936px !important; }
+.portrait #clinica .versus { width: 936px !important; }
+
+/* 08 convergencia */
 .portrait #convergencia .lives { grid-template-columns: 1fr; gap: 28px; }
 .portrait #convergencia svg { display: none; }
 .portrait #convergencia .athlete { flex-direction: column; align-items: flex-start; gap: 16px; margin-top: 40px; }
 
-/* 06 reto */
+/* 09 reto */
 .portrait #reto > div:nth-of-type(1) { flex-direction: column; align-items: flex-start !important; justify-content: center !important; gap: 72px; }
 .portrait #reto .data { width: 936px !important; }
-.portrait #reto .ruler { width: 936px !important; }
+.portrait #reto .hair { width: 936px !important; }
 
-/* 07 edad */
+/* 10 edad */
 .portrait #edad { justify-content: flex-start; }
-.portrait #edad > .shade-full { width: 1080px; height: 100%; background: linear-gradient(180deg, rgba(11,17,24,0.55) 0%, rgba(11,17,24,0.1) 30%, rgba(11,17,24,0.75) 58%, rgba(11,17,24,0.96) 78%) !important; }
+.portrait #edad > .shade-full { width: 1080px; height: 100%; background: linear-gradient(180deg, rgba(28,37,51,0.55) 0%, rgba(28,37,51,0.1) 30%, rgba(28,37,51,0.78) 58%, rgba(28,37,51,0.96) 78%) !important; }
 .portrait #edad > .ph, .portrait #edad > .ph img { width: 1080px !important; height: 100% !important; }
 .portrait #edad > div:nth-of-type(3) { width: 936px !important; justify-content: flex-end !important; }
 .portrait #edad .giant { font-size: 280px !important; }
 .portrait #edad p.a { width: 936px !important; }
 
-/* 08 experimento */
+/* 11 experimento */
 .portrait #experimento .lp { flex-direction: column; align-items: stretch; margin-top: 32px !important; }
 .portrait #experimento .lp-col { width: 936px; }
 .portrait #experimento .lp-col .big { font-size: 88px; text-align: left !important; }
 .portrait #experimento .lp-col > div { text-align: left !important; margin-top: 16px !important; }
 .portrait #experimento .item { font-size: 34px; padding: 10px 0; }
 .portrait #experimento .times { width: 120px; height: 120px; border-radius: 60px; margin: 36px 0; }
-.portrait #experimento .times p { font-size: 72px; }
-.portrait #experimento > p.serif { width: 936px !important; font-size: 46px !important; margin-top: 40px !important; }
+.portrait #experimento .times p { font-size: 68px; }
+.portrait #experimento > p.quote { width: 936px !important; font-size: 34px !important; margin-top: 40px !important; }
 
-/* 09 sistema */
+/* 12 sistema */
 .portrait #sistema > div:nth-of-type(1) { flex-direction: column; justify-content: center !important; gap: 40px; }
 .portrait #sistema > div:nth-of-type(1) > div:first-child { width: 936px !important; }
 .portrait #sistema .body { width: 936px !important; margin-top: 28px !important; }
 .portrait #sistema .cycle { margin-left: 36px; }
 
-/* 10 medir */
+/* 13 medir */
 .portrait #medir .dims { grid-template-columns: 1fr 1fr; gap: 56px 48px; }
 .portrait #medir .title { font-size: 84px !important; }
 
-/* 11 timeline */
+/* 14 timeline */
 .portrait #timeline .tl { grid-template-columns: 1fr; gap: 0; }
-.portrait #timeline .tl > div { border-left: 3px solid #2C3A4F; padding: 0 0 40px 40px; position: relative; }
-.portrait #timeline .tl > div:last-child { border-left-color: rgba(11,17,24,0); padding-bottom: 0; }
-.portrait #timeline .track { position: absolute; left: -13px; top: -2px; margin: 0; }
+.portrait #timeline .tl > div { border-left: 2px solid #5D768C; padding: 0 0 40px 40px; position: relative; }
+.portrait #timeline .tl > div:last-child { border-left-color: rgba(42,54,73,0); padding-bottom: 0; }
+.portrait #timeline .track { position: absolute; left: -10px; top: -2px; margin: 0; }
 .portrait #timeline .seg { display: none; }
 .portrait #timeline .ph-name { font-size: 56px; margin-top: 6px; }
 .portrait #timeline .ph-copy { margin: 6px 0 0 0; }
 .portrait #timeline .title { font-size: 84px !important; }
 .portrait #timeline .race { display: inline-block; }
 
-/* 12 audiencia */
-.portrait #audiencia .giant { font-size: 250px !important; letter-spacing: -12px !important; }
-.portrait #audiencia .lead { font-size: 60px !important; }
+/* 15 audiencia */
+.portrait #audiencia .giant { font-size: 250px !important; letter-spacing: -10px !important; }
+.portrait #audiencia .lead { font-size: 56px !important; }
 .portrait #audiencia .verbs { flex-direction: column; gap: 20px; }
 .portrait #audiencia .verb { font-size: 88px; }
-.portrait #audiencia .body { width: 936px !important; font-size: 32px; }
+.portrait #audiencia .quote { width: 936px !important; font-size: 32px !important; }
 
-/* 13 serie */
+/* 16 serie */
 .portrait #serie .eps { grid-template-columns: 1fr 1fr; gap: 24px 32px; }
 .portrait #serie .body { width: 936px !important; }
 
-/* 14 partner */
+/* 17 partner */
 .portrait #partner .eq { flex-direction: column; gap: 12px; }
 .portrait #partner .op { font-size: 56px; line-height: 1; }
 .portrait #partner .result { padding: 28px 72px; }
 .portrait #partner .gives { grid-template-columns: 1fr; gap: 32px; margin-top: 40px; }
 
-/* 15 valor */
+/* 18 valor */
 .portrait #valor .assets { grid-template-columns: 1fr 1fr; gap: 28px 32px; }
 .portrait #valor .asset-final { min-height: 200px; }
 
-/* 16 cierre */
+/* 19 cierre */
 .portrait #stage > #cierre { padding-left: 72px !important; padding-top: 1020px !important; }
 .portrait #cierre > .ph, .portrait #cierre > .ph img { width: 1080px !important; height: 1100px !important; }
-.portrait #cierre > .cover-shade { left: 0 !important; top: 680px; width: 1080px; height: 420px; background: linear-gradient(180deg, rgba(11,17,24,0) 0%, #0B1118 100%) !important; }
-.portrait #cierre .ruler { width: 936px !important; }
-
-/* encuadre: mantener la cabeza en las fotos del corredor */
-.portrait #cover > .ph img, .portrait #cierre > .ph img { object-position: 50% 0%; }
+.portrait #cierre > .ph img { object-position: 50% 0%; }
+.portrait #cierre > .cover-shade { left: 0 !important; top: 680px; width: 1080px; height: 420px; background: linear-gradient(180deg, rgba(28,37,51,0) 0%, #1C2533 100%) !important; }
+.portrait #cierre .pill { flex-wrap: wrap; gap: 12px 24px; }
