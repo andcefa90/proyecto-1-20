@@ -92,10 +92,15 @@ section{counter-increment:page;display:flex;flex-direction:column;padding:128px 
 .scar{display:flex;align-items:center;justify-content:space-between}
 .scar-num{font-size:600px;font-weight:200;letter-spacing:-20px;line-height:0.8;margin:0;color:#2A3649}
 
-/* 07 clínica */
-.versus{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid rgba(202,211,221,0.3)}
-.vs-cell{padding:22px 0;border-bottom:2px solid rgba(202,211,221,0.15)}
-.vs-cell .vv{font-size:36px;font-weight:300;margin:8px 0 0 0}
+/* 07 progresión de tiempos */
+.prog{display:flex;align-items:center;justify-content:space-between}
+.pstep{display:flex;flex-direction:column;align-items:flex-start}
+.pt{font-size:150px;font-weight:200;letter-spacing:-6px;line-height:1;margin:10px 0 8px 0}
+.pc{font-size:26px;font-weight:300;color:#CAD3DD;margin:0}
+.pgap{width:260px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.pline{width:260px;height:2px;background:rgba(202,211,221,0.45)}
+.pline-gold{background:#D2B58A}
+.prog-foot{display:flex;justify-content:space-between;align-items:flex-end}
 
 /* 08 convergencia */
 .lives{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px}

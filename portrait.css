@@ -50,11 +50,14 @@
 .portrait #lesiones .body { width: 936px !important; }
 .portrait #lesiones .nodes { margin-left: 9px; }
 
-/* 07 clínica */
-.portrait #clinica > div:nth-of-type(1) { flex-direction: column; align-items: flex-start !important; justify-content: center !important; gap: 64px; }
-.portrait #clinica > div:nth-of-type(1) > div:first-child { width: 936px !important; }
-.portrait #clinica .body { width: 936px !important; }
-.portrait #clinica .versus { width: 936px !important; }
+/* 07 progresión de tiempos */
+.portrait #clinica .title { font-size: 72px; }
+.portrait #clinica .prog { flex-direction: column; align-items: flex-start; gap: 0; }
+.portrait #clinica .pt { font-size: 170px; }
+.portrait #clinica .pgap { width: auto; flex-direction: row; gap: 24px; margin: 16px 0 16px 6px; }
+.portrait #clinica .pline { width: 2px; height: 80px; }
+.portrait #clinica .prog-foot { flex-direction: column; align-items: flex-start; gap: 32px; }
+.portrait #clinica .body, .portrait #clinica .frame { width: 936px !important; }
 
 /* 08 convergencia */
 .portrait #convergencia .lives { grid-template-columns: 1fr; gap: 28px; }
